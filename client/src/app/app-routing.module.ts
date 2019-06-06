@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
-const routes: Routes = [];
+export const AppRoutes: Routes = [
+    { path: 'login', component: LoginComponent }
+];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const ROUTING: ModuleWithProviders = RouterModule.forRoot(AppRoutes);
+
